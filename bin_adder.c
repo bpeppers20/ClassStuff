@@ -22,11 +22,25 @@ int main (int argc, char* argv[])
 		exit(EXIT_FAILURE);
 	}
 	nums = (int*) shmat(shmid, (void*)0, 0); // attach shm
-	nums[0] = 1;
-	while(1)
+	nums[0] = 0;
+	
+	// Store numbers based on total for summation
+	// Separate based on n/2
+	// separate based on n/logn
+	int sum = 0;
+	int i = 0; //Start wehre numbers are being added
+	// Semaphore Limit
+	//Test Alg
+	for(i; i < 5; i++)
 	{
-		printf("In Child\n");
-		nums [0] = nums[0] + 1;
-		printf("%d\n",nums[0]);
+		nums [i] = i;
 	}
+
+	for (i = 0; i < 5; i++)
+	{
+		sum += nums[i]; 
+		printf("Summation of i = 0 and n = %d is %d\n",i,sum);
+	}
+	//Test Alg
+	// Semaphore Limit
 }
