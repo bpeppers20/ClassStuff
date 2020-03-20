@@ -80,11 +80,5 @@ int main (int argc, char* argv[])
 	shmdt(shmPtr); // detach shm
 	shmctl(shm_id,IPC_RMID,NULL);
 	
-
-
-
-
-
-
 }
 
