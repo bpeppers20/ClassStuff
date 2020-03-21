@@ -1,0 +1,3 @@
+This program will take the user input ( must be an integer) and returns the its summation into the file "adder_log".
+All that is needed is for the user to call the master function (./master) and enter an integer.
+To see version control for this program, visit the link: github.com/bpeppers20/ClassStuff/commits/master.

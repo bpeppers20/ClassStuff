@@ -5,7 +5,7 @@ all: master bin_adder
 master: master.o
 	$(CC) -o master master.o
 bin_adder: bin_adder.o
-	$(CC) -o bin_adder bin_adder.o -lpthread
+	$(CC) -o bin_adder bin_adder.o -lpthread -lm
 master.o: master.c
 	$(CC) $(CFLAGS) master.c
 bin_adder.o: bin_adder.c
